@@ -47,11 +47,11 @@ plt.show()
 
 top_3_albums = tracks_df['Album Name'].value_counts().head(3)
 
-plt.figure(figsize=(8, 5))
+plt.figure(figsize=(8, 7))
 sns.barplot(x=top_3_albums.index, y=top_3_albums.values, hue=top_3_albums.values, data=top_10_songs[:3], palette='Greens', legend=False)
 plt.title('Top 3 Albums of Dua Lipa')
 plt.xlabel('Album Name')
 plt.ylabel('Number of Tracks')
-plt.xticks(rotation=45)
+plt.xticks(rotation=0)
 plt.savefig('Top 3 Albums of Dua Lipa.png')
 plt.show()
